@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo cp -rp firefox_dev.desktop ~/.local/share/applications/
 wget -O firefox.tar.bz2 "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US"
 sudo cp -rp firefox*.tar.bz2 /opt
