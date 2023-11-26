@@ -9,3 +9,4 @@ sudo rm -rf firefox*.tar.bz2
 sudo chown -R $USER /opt/firefox
 
 #if line 6 doesnt work  tar -x -f firefox.tar.bz2
+#chmod +x doit.sh
