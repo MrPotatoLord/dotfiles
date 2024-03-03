@@ -17,3 +17,19 @@ mods = "Control"
 chars = "\u0003"
 key = "C"
 mods = "Control|Shift"
+
+[font.normal]
+family = "Liga SFMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Liga SFMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Liga SFMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Liga SFMono Nerd Font"
+style = "Bold Italic"
