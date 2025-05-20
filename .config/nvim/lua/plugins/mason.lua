@@ -5,9 +5,9 @@ local plugins = {
       ensure_installed = {
         "typescript_language_server",
         "some-sass-language-server",
-        "prettier"
-      }
-    }
+        "prettier",
+      },
+    },
   },
 }
 return plugins

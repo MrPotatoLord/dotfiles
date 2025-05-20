@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -13,17 +13,20 @@ return {
     end,
   },
   -- {
---   "nvim-tree/nvim-tree.lua",
---     mappings = {
---       custom_only = false, -- Allow default mappings alongside custom ones
---       list = {
---         { key = "x", action = "run_file_command", action_cb = function()
---         vim.api.nvim_command(string.format('silent !explorer.exe /select,"%s"', path)) 
---         },
---       },
---     },
---  }
-
+  --   "svermeulen/vimpeccable",
+  --   lazy = false,
+  -- },
+  -- {
+  --   "nvim-tree/nvim-tree.lua",
+  --     mappings = {
+  --       custom_only = false, -- Allow default mappings alongside custom ones
+  --       list = {
+  --         { key = "x", action = "run_file_command", action_cb = function()
+  --         vim.api.nvim_command(string.format('silent !explorer.exe /select,"%s"', path))
+  --         },
+  --       },
+  --     },
+  --  }
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
