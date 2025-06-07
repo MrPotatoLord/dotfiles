@@ -5,13 +5,17 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 -- local api = require "nvim-tree.api"
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
-map("n", "İ", "I")
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("i", "jk", "<ESC>")
+map("n", "ı", "i")
 map("n", "Ğ", "$")
+map("n", "i", "<C-d>zz")
+map("n", "İ", "<C-u>zz")
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
-map("n", ";", ";")
+map("n", ";", ",")
+map("n", ",", ";")
+
 -- map("t", "<C-ç>", "<C-\\>")
 
 -- local function my_on_attach(bufnr)
