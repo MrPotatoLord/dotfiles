@@ -15,6 +15,10 @@ map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 map("n", ";", ",")
 map("n", ",", ";")
+map("x", "<leader>p", '"_dP')
+map("i", "<C-H>", "<C-W>")
+-- map("i", "<C-H>", "<C-O>dvb")
+-- map("t", "<C-ç>", "<C-\\>")
 
 -- map("t", "<C-ç>", "<C-\\>")
 
