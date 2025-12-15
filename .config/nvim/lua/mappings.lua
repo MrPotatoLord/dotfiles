@@ -17,10 +17,29 @@ map("n", ";", ",")
 map("n", ",", ";")
 map("x", "<leader>p", '"_dP')
 map("i", "<C-H>", "<C-W>")
--- map("i", "<C-H>", "<C-O>dvb")
--- map("t", "<C-ç>", "<C-\\>")
 
--- map("t", "<C-ç>", "<C-\\>")
+-- Compiler.nvim stuff
+-- Open compiler
+map("n", "<leader><F6>", "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
+
+-- Redo last selected option
+map(
+  "n",
+  "<F6>",
+  "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+    .. "<cmd>CompilerRedo<cr>",
+  { noremap = true, silent = true }
+)
+
+-- Toggle compiler results
+map("n", "<F7>", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true }) -- map("i", "<C-H>", "<C-O>dvb")
+
+
+
+
+
+
+-- nvimtree experiments
 
 -- local function my_on_attach(bufnr)
 --   local vimp = require "vimp"
