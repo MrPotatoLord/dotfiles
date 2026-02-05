@@ -1,7 +1,5 @@
 require "nvchad.mappings"
 
--- add yours here
-
 local map = vim.keymap.set
 -- local api = require "nvim-tree.api"
 
@@ -9,14 +7,26 @@ local map = vim.keymap.set
 -- map("i", "jk", "<ESC>")
 map("n", "ı", "i")
 map("n", "Ğ", "$")
-map("n", "i", "<C-d>zz")
-map("n", "İ", "<C-u>zz")
-map("v", "J", ":m '>+1<CR>gv=gv")
-map("v", "K", ":m '<-2<CR>gv=gv")
 map("n", ";", ",")
 map("n", ",", ";")
+
+-- jump up and down
+map("n", "i", "<C-d>zz")
+map("n", "İ", "<C-u>zz")
+
+-- carry text in visual mode
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+
+-- paste in visual mode
 map("x", "<leader>p", '"_dP')
+
+-- ctrl delete in insert mode
 map("i", "<C-H>", "<C-W>")
+
+-- lsp actions
+map("n", "gf", vim.lsp.buf.code_action)
+map("n", "gl", vim.diagnostic.setloclist)
 
 -- Compiler.nvim stuff
 -- Open compiler
@@ -34,13 +44,11 @@ map(
 -- Toggle compiler results
 map("n", "<F7>", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true }) -- map("i", "<C-H>", "<C-O>dvb")
 
-
-
-
-
-
--- nvimtree experiments
-
+local nomap = vim.keymap.del
+nomap("n", "<leader>ds")
+nomap({ "x", "n" }, "gra")
+nomap("n", "<leader>n")
+nomap("n", "<leader>rn")
 -- local function my_on_attach(bufnr)
 --   local vimp = require "vimp"
 --   local treeapi = require "nvim-tree.api"

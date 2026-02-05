@@ -1,5 +1,6 @@
 return {
   { "folke/which-key.nvim", lazy = false },
+  { "github/copilot.vim", lazy = false },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -13,24 +14,6 @@ return {
       require "configs.lspconfig"
     end,
   },
-  -- {
-  --   "svermeulen/vimpeccable",
-  --   lazy = false,
-  -- },
-  -- {
-  --   "nvim-tree/nvim-tree.lua",
-  --     mappings = {
-  --       custom_only = false, -- Allow default mappings alongside custom ones
-  --       list = {
-  --         { key = "x", action = "run_file_command", action_cb = function()
-  --         vim.api.nvim_command(string.format('silent !explorer.exe /select,"%s"', path))
-  --         },
-  --       },
-  --     },
-  --  }
-
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -50,4 +33,23 @@ return {
     },
     auto_install = true,
   },
+
+  -- {
+  --   "svermeulen/vimpeccable",
+  --   lazy = false,
+  -- },
+  -- {
+  --   "nvim-tree/nvim-tree.lua",
+  --     mappings = {
+  --       custom_only = false, -- Allow default mappings alongside custom ones
+  --       list = {
+  --         { key = "x", action = "run_file_command", action_cb = function()
+  --         vim.api.nvim_command(string.format('silent !explorer.exe /select,"%s"', path))
+  --         },
+  --       },
+  --     },
+  --  }
+
+  -- test new blink
+  -- { import = "nvchad.blink.lazyspec" },
 }

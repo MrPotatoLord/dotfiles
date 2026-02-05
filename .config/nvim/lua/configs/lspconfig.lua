@@ -7,6 +7,15 @@ vim.lsp.config("ts_ls", {
       disableSuggestions = true,
     },
   },
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+    "html",
+  },
 })
 vim.lsp.enable(servers)
 
