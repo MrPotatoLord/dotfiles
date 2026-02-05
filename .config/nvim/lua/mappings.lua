@@ -5,14 +5,41 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 -- local api = require "nvim-tree.api"
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
-map("n", "İ", "I")
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("i", "jk", "<ESC>")
+map("n", "ı", "i")
 map("n", "Ğ", "$")
+map("n", "i", "<C-d>zz")
+map("n", "İ", "<C-u>zz")
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
-map("n", ";", ";")
--- map("t", "<C-ç>", "<C-\\>")
+map("n", ";", ",")
+map("n", ",", ";")
+map("x", "<leader>p", '"_dP')
+map("i", "<C-H>", "<C-W>")
+
+-- Compiler.nvim stuff
+-- Open compiler
+map("n", "<leader><F6>", "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
+
+-- Redo last selected option
+map(
+  "n",
+  "<F6>",
+  "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+    .. "<cmd>CompilerRedo<cr>",
+  { noremap = true, silent = true }
+)
+
+-- Toggle compiler results
+map("n", "<F7>", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true }) -- map("i", "<C-H>", "<C-O>dvb")
+
+
+
+
+
+
+-- nvimtree experiments
 
 -- local function my_on_attach(bufnr)
 --   local vimp = require "vimp"
