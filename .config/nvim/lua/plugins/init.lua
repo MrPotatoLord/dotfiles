@@ -39,8 +39,8 @@ return {
       local cmp = require "cmp"
 
       -- Override specific mappings in the existing NvChad config
-      opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
-      opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
+      -- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
+      -- opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
     end,
   },
 
