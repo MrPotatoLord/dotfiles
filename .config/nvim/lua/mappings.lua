@@ -44,6 +44,14 @@ map(
 -- Toggle compiler results
 map("n", "<F7>", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true }) -- map("i", "<C-H>", "<C-O>dvb")
 
+-- Remap copilot suggestion accept to ctrl-enter
+map('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
+
+
 local nomap = vim.keymap.del
 nomap("n", "<leader>ds")
 nomap({ "x", "n" }, "gra")
