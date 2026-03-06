@@ -12,6 +12,7 @@ return {
         "prettier",
         -- "csharp-language-server",
         "roslyn",
+        "ruby_lsp",
       },
     },
   },
