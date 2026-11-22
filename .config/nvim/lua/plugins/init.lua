@@ -1,6 +1,12 @@
 return {
   { "folke/which-key.nvim", lazy = false },
-  { "github/copilot.vim", lazy = false },
+  {
+    "github/copilot.vim",
+    lazy = false,
+    init = function()
+      vim.g.copilot_enabled = false -- start disabled; use :Copilot enable to turn on
+    end,
+  },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
